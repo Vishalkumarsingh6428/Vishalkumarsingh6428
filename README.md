@@ -43,17 +43,52 @@ Started contributing in October 2026. My first pull request was opened on Oct 7.
 
 ## Featured projects
 
-| Project | What it does | Stack |
-|---|---|---|
-| [**financial-filings-copilot**](https://github.com/Vishalkumarsingh6428/financial-filings-copilot) · [🔗 Live app](https://financial-filings-copilot.streamlit.app) | Evidence-grounded agentic RAG for SEC 10-K/10-Q filings (15 companies, 75 filings). Hybrid retrieval (dense + BM25 + RRF) with cross-encoder reranking, a LangGraph workflow that grades evidence, retries weak retrieval (max 2) and verifies citations. Recall@5 improved from 58.3% → 66.7% → 75.0% across vector-only, hybrid and reranked setups. FastAPI backend and Streamlit UI | LangGraph, Pinecone, Groq, FastAPI, Streamlit |
-| [**ALNM-detection-multimodal**](https://github.com/Vishalkumarsingh6428/ALNM-detection-multimodal) | Detects axillary lymph node metastasis by combining ultrasound images with clinical data (ER, PR, HER2). Test AUC 0.8344, 5-fold CV AUC 0.7997, Grad-CAM explainability | PyTorch, EfficientNet-B0 |
-| [**ocr-rag-llm-pipeline**](https://github.com/Vishalkumarsingh6428/ocr-rag-llm-pipeline) | Free, self-hosted pipeline: upload documents, extract text with OCR, chat with them | n8n, Gemini, Supabase |
-| [**Personal_Finance_Environment**](https://github.com/Vishalkumarsingh6428/Personal_Finance_Environment) | AI-powered finance environment for decision-making under uncertainty (OpenEnv compliant) | Python |
-| [**ipl-ai-predictor**](https://github.com/Vishalkumarsingh6428/ipl-ai-predictor) | IPL prediction project (my most active repo, 20 commits in June 2026) | Python |
-| [**reliable-dpo-finetuning**](https://github.com/Vishalkumarsingh6428/reliable-dpo-finetuning) | Direct Preference Optimization fine-tuning experiments | Jupyter, LLMs |
-| [**binance-futures-testnet-bot**](https://github.com/Vishalkumarsingh6428/binance-futures-testnet-bot) | Modular CLI for MARKET, LIMIT and STOP-LIMIT orders on Binance Futures Testnet, with validation, logging and unit tests | Python |
+<table>
+<tr>
+<td width="50%" valign="top">
+<a href="https://github.com/Vishalkumarsingh6428/financial-filings-copilot"><b>financial-filings-copilot</b></a><br>
+Evidence-grounded agentic RAG for SEC 10-K/10-Q filings · Recall@5 58% → 75% · <a href="https://financial-filings-copilot.streamlit.app">Live app</a><br>
+<img src="https://img.shields.io/badge/FOCUS-RAG_%7C_LANGGRAPH_%7C_AGENTS-0d1117?style=for-the-badge&labelColor=3b9be0"><br>
+<img src="https://img.shields.io/github/stars/Vishalkumarsingh6428/financial-filings-copilot?style=flat-square"> <img src="https://img.shields.io/github/forks/Vishalkumarsingh6428/financial-filings-copilot?style=flat-square">
+</td>
+<td width="50%" valign="top">
+<a href="https://github.com/Vishalkumarsingh6428/ALNM-detection-multimodal"><b>ALNM-detection-multimodal</b></a><br>
+Lymph node metastasis detection from ultrasound + clinical data · AUC 0.8344 · Grad-CAM<br>
+<img src="https://img.shields.io/badge/FOCUS-MULTIMODAL_%7C_MEDICAL_AI-0d1117?style=for-the-badge&labelColor=2ea44f"><br>
+<img src="https://img.shields.io/github/stars/Vishalkumarsingh6428/ALNM-detection-multimodal?style=flat-square"> <img src="https://img.shields.io/github/forks/Vishalkumarsingh6428/ALNM-detection-multimodal?style=flat-square">
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+<a href="https://github.com/Vishalkumarsingh6428/ocr-rag-llm-pipeline"><b>ocr-rag-llm-pipeline</b></a><br>
+Self-hosted OCR + RAG + LLM pipeline: upload documents and chat with them<br>
+<img src="https://img.shields.io/badge/FOCUS-RAG_%7C_OCR_%7C_AUTOMATION-0d1117?style=for-the-badge&labelColor=e0943b"><br>
+<img src="https://img.shields.io/github/stars/Vishalkumarsingh6428/ocr-rag-llm-pipeline?style=flat-square"> <img src="https://img.shields.io/github/forks/Vishalkumarsingh6428/ocr-rag-llm-pipeline?style=flat-square">
+</td>
+<td width="50%" valign="top">
+<a href="https://github.com/Vishalkumarsingh6428/Personal_Finance_Environment"><b>Personal_Finance_Environment</b></a><br>
+Personal finance environment for decision-making under uncertainty (OpenEnv compliant)<br>
+<img src="https://img.shields.io/badge/FOCUS-RL_%7C_ENVIRONMENTS-0d1117?style=for-the-badge&labelColor=8a4fe0"><br>
+<img src="https://img.shields.io/github/stars/Vishalkumarsingh6428/Personal_Finance_Environment?style=flat-square"> <img src="https://img.shields.io/github/forks/Vishalkumarsingh6428/Personal_Finance_Environment?style=flat-square">
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+<a href="https://github.com/Vishalkumarsingh6428/reliable-dpo-finetuning"><b>reliable-dpo-finetuning</b></a><br>
+Direct Preference Optimization fine-tuning experiments<br>
+<img src="https://img.shields.io/badge/FOCUS-LLM_%7C_FINE--TUNING-0d1117?style=for-the-badge&labelColor=8a4fe0"><br>
+<img src="https://img.shields.io/github/stars/Vishalkumarsingh6428/reliable-dpo-finetuning?style=flat-square"> <img src="https://img.shields.io/github/forks/Vishalkumarsingh6428/reliable-dpo-finetuning?style=flat-square">
+</td>
+<td width="50%" valign="top">
+<a href="https://github.com/Vishalkumarsingh6428/ipl-ai-predictor"><b>ipl-ai-predictor</b></a><br>
+IPL match prediction project<br>
+<img src="https://img.shields.io/badge/FOCUS-ML_%7C_PREDICTION-0d1117?style=for-the-badge&labelColor=e0504a"><br>
+<img src="https://img.shields.io/github/stars/Vishalkumarsingh6428/ipl-ai-predictor?style=flat-square"> <img src="https://img.shields.io/github/forks/Vishalkumarsingh6428/ipl-ai-predictor?style=flat-square">
+</td>
+</tr>
+</table>
 
-<!-- Fill in the ipl-ai-predictor and reliable-dpo-finetuning descriptions with what they actually do and any results. -->
+<!-- Replace the ipl-ai-predictor and reliable-dpo-finetuning descriptions with what they really do, and fix the focus badges to match. -->
 
 ---
 
