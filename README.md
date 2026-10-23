@@ -5,6 +5,7 @@
 I build practical AI systems: document-chat pipelines, medical imaging models, fine-tuning experiments and decision-making environments. I like taking an idea from a notebook to something people can actually run, and I contribute to open source along the way.
 
 📫 vishalkumarsingh6428@gmail.com · 🇮🇳 India
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Vishal_Kumar_Singh-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vishal-kumar-singh-6b3873326)
 
 ---
 
@@ -12,7 +13,7 @@ I build practical AI systems: document-chat pipelines, medical imaging models, f
 
 - 🔧 Open-source contributions to **Soup** (merged PR #2064) and **SoupTeam/SoupZero** (October 2026)
 - 🧠 Fine-tuning experiments (DPO) and RAG pipelines
-- 📈 Financial-filings analysis and RL environments
+- 📈 Improving [Financial Filings Copilot](https://github.com/Vishalkumarsingh6428/financial-filings-copilot) (multi-turn questions, claim-level citations) and RL environments
 
 ---
 
@@ -44,6 +45,7 @@ Started contributing in October 2026. My first pull request was opened on Oct 7.
 
 | Project | What it does | Stack |
 |---|---|---|
+| [**financial-filings-copilot**](https://github.com/Vishalkumarsingh6428/financial-filings-copilot) · [🔗 Live app](https://financial-filings-copilot.streamlit.app) | Evidence-grounded agentic RAG for SEC 10-K/10-Q filings (15 companies, 75 filings). Hybrid retrieval (dense + BM25 + RRF) with cross-encoder reranking, a LangGraph workflow that grades evidence, retries weak retrieval (max 2) and verifies citations. Recall@5 improved from 58.3% → 66.7% → 75.0% across vector-only, hybrid and reranked setups. FastAPI backend and Streamlit UI | LangGraph, Pinecone, Groq, FastAPI, Streamlit |
 | [**ALNM-detection-multimodal**](https://github.com/Vishalkumarsingh6428/ALNM-detection-multimodal) | Detects axillary lymph node metastasis by combining ultrasound images with clinical data (ER, PR, HER2). Test AUC 0.8344, 5-fold CV AUC 0.7997, Grad-CAM explainability | PyTorch, EfficientNet-B0 |
 | [**ocr-rag-llm-pipeline**](https://github.com/Vishalkumarsingh6428/ocr-rag-llm-pipeline) | Free, self-hosted pipeline: upload documents, extract text with OCR, chat with them | n8n, Gemini, Supabase |
 | [**Personal_Finance_Environment**](https://github.com/Vishalkumarsingh6428/Personal_Finance_Environment) | AI-powered finance environment for decision-making under uncertainty (OpenEnv compliant) | Python |
@@ -61,7 +63,7 @@ Started contributing in October 2026. My first pull request was opened on Oct 7.
 - [heart_disease_prediction](https://github.com/Vishalkumarsingh6428/heart_disease_prediction): classification on health data (Jupyter)
 - [loan-Default-pridiction](https://github.com/Vishalkumarsingh6428/loan-Default-pridiction): loan default prediction (rename the repo to fix the spelling)
 - [chatbot](https://github.com/Vishalkumarsingh6428/chatbot): my first chatbot (Jupyter)
-- financial-filings and Time-Series-Asset projects: add links here with the full repo names
+- Time-Series-Asset project: add the link here with the full repo name
 
 ---
 
