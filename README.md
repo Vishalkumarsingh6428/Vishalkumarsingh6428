@@ -24,8 +24,8 @@ I build practical AI systems: agentic RAG, medical imaging models, voice-agent M
 <tr>
 <td width="50%" valign="top">
 
-**[Soup](https://github.com/MakazhanAlpamys/Soup)**
-Fine-tuning toolkit · ✅ PR [#2064](https://github.com/MakazhanAlpamys/Soup/pull/2064) merged<br>
+**[Soup](https://github.com/MakazhanAlpamys/Soup)** · [trysoup.dev](https://trysoup.dev)
+Open-source CLI for fine-tuning and post-training LLMs · ✅ PR [#2064](https://github.com/MakazhanAlpamys/Soup/pull/2064) merged<br>
 ![focus](https://img.shields.io/badge/FOCUS-CONFIG%20VALIDATION%20%7C%20VLM%20%7C%20DPO-0f172a?style=flat-square&labelColor=3b82f6)<br>
 ![stars](https://img.shields.io/github/stars/MakazhanAlpamys/Soup?style=flat-square&labelColor=374151&color=f59e0b)
 ![forks](https://img.shields.io/github/forks/MakazhanAlpamys/Soup?style=flat-square&labelColor=374151&color=60a5fa)
@@ -34,7 +34,7 @@ Fine-tuning toolkit · ✅ PR [#2064](https://github.com/MakazhanAlpamys/Soup/pu
 <td width="50%" valign="top">
 
 **[SoupTeam/SoupZero](https://github.com/SoupTeam/SoupZero)**
-Desktop app for fine-tuning LLMs · I own the safe-config work · ✅ 5 PRs merged ([#116](https://github.com/SoupTeam/SoupZero/pull/116), [#126](https://github.com/SoupTeam/SoupZero/pull/126), [#148](https://github.com/SoupTeam/SoupZero/pull/148), [#171](https://github.com/SoupTeam/SoupZero/pull/171), [#3](https://github.com/SoupTeam/SoupZero/pull/3))<br>
+Desktop workbench built on Soup (the "Soup Zero" app) · I own the safe-config work · ✅ 5 PRs merged ([#116](https://github.com/SoupTeam/SoupZero/pull/116), [#126](https://github.com/SoupTeam/SoupZero/pull/126), [#148](https://github.com/SoupTeam/SoupZero/pull/148), [#171](https://github.com/SoupTeam/SoupZero/pull/171), [#3](https://github.com/SoupTeam/SoupZero/pull/3))<br>
 ![focus](https://img.shields.io/badge/FOCUS-TRAINING%20CONFIG%20%7C%20VALIDATION%20%7C%20SAFE%20WRITES-0f172a?style=flat-square&labelColor=8b5cf6)<br>
 ![stars](https://img.shields.io/github/stars/SoupTeam/SoupZero?style=flat-square&labelColor=374151&color=f59e0b)
 ![forks](https://img.shields.io/github/forks/SoupTeam/SoupZero?style=flat-square&labelColor=374151&color=60a5fa)
