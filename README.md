@@ -11,7 +11,7 @@ I build practical AI systems: agentic RAG, medical imaging models, voice-agent M
 
 ## Now
 
-- 🔧 Open source: merged PR in **Soup**, contributing to **SoupZero**
+- 🔧 Open source: 1 merged PR in **Soup** and 5 merged PRs in **SoupZero**, both around LLM fine-tuning configs
 - 🧠 Fine-tuning experiments (DPO) and agentic RAG
 - 📈 Improving [Financial Filings Copilot](https://github.com/Vishalkumarsingh6428/financial-filings-copilot) (multi-turn questions, claim-level citations)
 - 🎙️ Exploring voice-agent latency and turn-taking
@@ -33,9 +33,11 @@ Fine-tuning toolkit · ✅ PR [#2064](https://github.com/MakazhanAlpamys/Soup/pu
 </td>
 <td width="50%" valign="top">
 
-**SoupTeam/SoupZero**
-3 PRs · form validation, one-command dev setup, Windows docstring fix<br>
-![focus](https://img.shields.io/badge/FOCUS-VALIDATION%20%7C%20DEV%20EXPERIENCE-0f172a?style=flat-square&labelColor=8b5cf6)
+**[SoupTeam/SoupZero](https://github.com/SoupTeam/SoupZero)**
+Desktop app for fine-tuning LLMs · I own the safe-config work · ✅ 5 PRs merged ([#116](https://github.com/SoupTeam/SoupZero/pull/116), [#126](https://github.com/SoupTeam/SoupZero/pull/126), [#148](https://github.com/SoupTeam/SoupZero/pull/148), [#171](https://github.com/SoupTeam/SoupZero/pull/171), [#3](https://github.com/SoupTeam/SoupZero/pull/3))<br>
+![focus](https://img.shields.io/badge/FOCUS-TRAINING%20CONFIG%20%7C%20VALIDATION%20%7C%20SAFE%20WRITES-0f172a?style=flat-square&labelColor=8b5cf6)<br>
+![stars](https://img.shields.io/github/stars/SoupTeam/SoupZero?style=flat-square&labelColor=374151&color=f59e0b)
+![forks](https://img.shields.io/github/forks/SoupTeam/SoupZero?style=flat-square&labelColor=374151&color=60a5fa)
 
 </td>
 </tr>
@@ -44,13 +46,17 @@ Fine-tuning toolkit · ✅ PR [#2064](https://github.com/MakazhanAlpamys/Soup/pu
 **Soup #2064** · [`fix(config): refuse vision row formats on preference tasks, drop pixtral-dpo recipe`](https://github.com/MakazhanAlpamys/Soup/pull/2064)
 Fixed [#1867](https://github.com/MakazhanAlpamys/Soup/issues/1867): a recipe passed validation and `--dry-run`, then failed after the model loaded. Config load now refuses `dpo`, `ipo`, `simpo`, `orpo`, `bco` and `preference` with `llava` / `sharegpt4v`, with an error naming the task and format. Added 12 refusal tests, text-format controls and a catalog test; removing the validator fails all 12 refusal cases. I posted the plan on the issue first, fixed the review feedback in one commit, and all 17 CI checks passed. It led to follow-up issue [#2078](https://github.com/MakazhanAlpamys/Soup/issues/2078).
 
-**SoupZero PRs**
+**SoupZero: keeping a fine-tuning config from being silently overwritten or corrupted**
 
-| PR | What I changed |
+SoupZero has several ways to edit one `soup.yaml` (form, code editor, AI assistant, dataset import, evals), and the last writer used to win. I reproduced the data-loss bug, proposed the revision-check design in [#44](https://github.com/SoupTeam/SoupZero/issues/44), and then delivered issue [#45](https://github.com/SoupTeam/SoupZero/issues/45) as three reviewed PRs, tests first:
+
+| PR | What I built |
 |---|---|
-| `fix(form): reject wrong-type values in form reads` | Rejects non-string `base` and `training.quantization`, and invalid `training.batch_size`, when projecting `soup.yaml` into the form (+59 −3, 10 review comments) |
-| `feat: one-command developer setup` | Added `scripts/setup.ps1` and clearer setup docs |
-| `fix(identity): raw module docstring` | Made the docstring raw so Windows path examples survive |
+| ✅ [#116](https://github.com/SoupTeam/SoupZero/pull/116) `feat(config): add revision-aware config transactions` (+568 −34) | Per-project locked transaction: stale saves get a `409 config_conflict` and write nothing, exclusive attempt-owned temp files, validated no-ops. Fixed four review findings; 486 tests green, including on Windows CI |
+| ✅ [#126](https://github.com/SoupTeam/SoupZero/pull/126) `fix(config): preserve unexposed settings in form patches` (+491 −24) | Form saves patch only the controls that changed, so custom `data.train`, LoRA settings and other settings the form doesn't show survive. Typed comparison for values like quoted `batch_size` and `stream_layers`; 14 baseline tests failing before the fix |
+| ✅ [#148](https://github.com/SoupTeam/SoupZero/pull/148) `fix(data): serialize import and eval writers with config revisions` (+800 −57) | Dataset import, demo data and eval writers share the same lock, so a generated eval can't be published as fresh after the data changed. Refuses custom `data.train` paths, and added protection against read-only and symlinked demo destinations. Independent reviewers ran the full suite on Windows and Linux (742 passed on Linux) |
+| ✅ [#171](https://github.com/SoupTeam/SoupZero/pull/171) `fix(form): reject wrong-type values in form reads` (+59 −3) | Rejects wrong-type `base` and `quantization` and non-positive `batch_size`, which would crash the PyTorch DataLoader at training launch. A reviewer caught the zero/negative case; fixed and merged |
+| ✅ [#3](https://github.com/SoupTeam/SoupZero/pull/3) `feat(setup): add one-command Windows developer setup` | `scripts/setup.ps1` plus clearer setup docs |
 
 ---
 
@@ -123,7 +129,8 @@ Direct Preference Optimization fine-tuning experiments<br>
 
 | Highlight | Detail |
 |---|---|
-| **Merged open-source PR** | Fixed a validation gap in [Soup](https://github.com/MakazhanAlpamys/Soup) (#2064): planned on the issue, mutation-tested the fix, passed all 17 CI checks, and the maintainer filed a follow-up issue from it |
+| **Open-source contributor on fine-tuning tools** | 6 merged PRs across [Soup](https://github.com/MakazhanAlpamys/Soup) and [SoupZero](https://github.com/SoupTeam/SoupZero) (config validation, conflict-safe saves, safe dataset import), reviewed by maintainers and independent reviewers |
+| **Safe config saves for an LLM fine-tuning app** | Owned issue #45 in SoupZero: reproduced a bug where one edit overwrote another, then shipped revision-checked saves, patch-only form edits and locked data/eval writers in 3 PRs (+1,800 lines, tests first) |
 | **Agentic RAG, deployed** | [Financial Filings Copilot](https://financial-filings-copilot.streamlit.app): hybrid retrieval + reranking + LangGraph + citation verification over 75 SEC filings; Recall@5 improved 58.3% → 66.7% → 75.0%, with failures documented |
 | **Multimodal medical AI** | ALNM detection from ultrasound + clinical data: AUC 0.8344, 5-fold CV AUC 0.7997, with Grad-CAM explainability |
 | **Voice-agent ML** | End-of-turn detection from audio before the pause only (strict causality): ~15% lower response delay on English at 5% interrupted turns; Hindi AUC 0.516 → 0.703 |
