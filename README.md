@@ -1,6 +1,6 @@
 # Hi, I'm Vishal Kumar Singh 👋
 
-**AI Engineer** · LLMs • RAG • Multimodal AI · IIT Madras
+**IIT Madras**
 
 I build practical AI systems: agentic RAG, medical imaging models, voice-agent ML and fine-tuning experiments. I like taking an idea from a notebook to something people can actually run, and I contribute to open source along the way.
 
